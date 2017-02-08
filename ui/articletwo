@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Article One</title>
+    <meta name="viewport" context="width-device-width, initial-scale=1"/> 
+    </head>
+<body>
+    <div>
+        <a href="/">Home</a>
+    </div>
+    <hr/>
+    <h3>Article Two</h3>
+    <div>
+        Todays date is :dd/mm/yyyy
+    </div>
+    <div>
+        <p>
+        This is the content of my second article
+        This is the content of my second article
+        This is the content of my second article
+        </p>
+         <p>
+        This is the content of my second article
+        This is the content of my second article
+        This is the content of my second article
+        </p>
+         <p>
+        This is the content of my second article
+        This is the content of my second article
+        This is the content of my second article
+        </p>
+    </div>
+</body>
+</html>

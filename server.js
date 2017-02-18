@@ -83,6 +83,18 @@ app.get('/counter',function(req,res){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var names= [];
+app.get('/submit-name/:name',function(req,res){
+   //Get the name from the request object
+   var name=req.query.name;
+   
+   names.push(name);
+   // JSON:javascript object notation(convert object to string)
+
+   res.send(JSON.stringify(names));
+});
+
 app.get('/:articleName', function (req, res) {
     //articleName=articleone
     //articles[articleName]=content object for articleOne
@@ -110,16 +122,6 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names= [];
-app.get('/submit-name/:name',function(req,res){
-   //Get the name from the request object
-   var name=req.query.name;
-   
-   names.push(name);
-   // JSON:javascript object notation(convert object to string)
-
-   res.send(JSON.stringify(names));
-});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80

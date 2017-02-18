@@ -11,6 +11,5 @@ function moveRight(){
     img.style.marginleft+"px";
 }
 madi.onclick=function(){
-  img.style.marginleft='100px';
   var interval=setInterval(moveRight,50);
 };

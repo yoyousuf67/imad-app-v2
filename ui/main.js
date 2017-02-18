@@ -40,10 +40,9 @@ request.onreadystatechange=function(){
             //capture a list of names and render it as a list
         var names=request.responseText;
         name=JSON.parse(names);
-     
          var list='';
          for(var i=0;i<names.length;i++){
-             list += '<li>'+ names[i]+ '</li>';
+             list += '<li>'+names[i]+ '</li>';
          }
          var ul=document.getElementById('namelist');
          ul.innerHTML=list;
@@ -54,7 +53,7 @@ request.onreadystatechange=function(){
  var nameInput=document.getElementById('name');
  var name= nameInput.value;
 //make a request
-request.open('GET','http://yoyousuf67.imad.hasura-app.io/submit-name?'+name,true);
+request.open('GET','http://yoyousuf67.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 
      //make a request to the server and send the name

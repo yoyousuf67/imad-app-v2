@@ -20,6 +20,6 @@ request.onreadystatechange=function(){
   //not done ignore it
 }; 
 //make a request
-reqest.open('GET','http://yoyousuf67.imad.hasura-app.io/counter',true);
+request.open('GET','http://yoyousuf67.imad.hasura-app.io/counter',true);
 request.send(null);
  };

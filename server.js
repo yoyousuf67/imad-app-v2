@@ -13,7 +13,7 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
+/*var articles={
 articleOne:{
   title:'Article One',
   heading: 'Article One',
@@ -50,7 +50,7 @@ articleThree:{ title:'Article Three',
             This is the content of my third article
             This is the content of my third article
             </p> `}
-};
+};*/
 function createTemplate (data){
     var title=data.title;
     var date=data.date;

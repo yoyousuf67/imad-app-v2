@@ -8,7 +8,7 @@ var config={
     host:'db.imad.hasura-app.io',
     port:'5432',
     password:process.env.DB_PASSWORD//environment variable
-}
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -70,7 +70,7 @@ var htmlTemplate=` <html>
         <hr/>
         <h3>${heading}</h3>
         <div>
-            ${date.toDateString()}
+            ${date}
         </div>
         <div>
             ${content}

@@ -62,7 +62,7 @@ request.onreadystatechange=function(){
  console.log(password);
  //var name= nameInput.value;
 //make a request
-request.open('POST','http://yoyousuf67.imad.hasura-app.io/submit-name/login',true);
+request.open('POST','http://yoyousuf67.imad.hasura-app.io/login',true);
 
 request.setRequestHeader('Content-type','application/json');
 request.send(JSON.stringify({username: username, password:password}));

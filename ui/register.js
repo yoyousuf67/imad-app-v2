@@ -17,3 +17,18 @@ request.onreadystatechange=function(){
               
           }
       }
+ }; 
+ var username=document.getElementById('username').value;
+ var password=document.getElementById('password').value;
+ console.log(username);
+ console.log(password);
+ //var name= nameInput.value;
+//make a request
+request.open('POST','http://yoyousuf67.imad.hasura-app.io/create-user',true);
+
+request.setRequestHeader('Content-type','application/json');
+request.send(JSON.stringify({username: username, password:password}));
+
+     //make a request to the server and send the name
+     
+ };

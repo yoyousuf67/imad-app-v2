@@ -16,10 +16,9 @@ color: yellow;
 }
 
 #hospital {
-    height:auto;
-	width: auto;
-	margin:0;
-	padding:0;
+    position:absolute;
+top:5px;
+left:5px;
 }
 
 .text-big {

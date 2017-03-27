@@ -39,3 +39,7 @@ left:5px;
 #log{
     text-align:center;
 }
+#username,#password{
+ width: 300px; height: 20px; 
+}
+

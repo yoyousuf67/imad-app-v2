@@ -5,6 +5,16 @@ Background-image:url(/ui/back.jpg);
 background-repeat:repeat-x;
 }
 
+a:link {
+color: green;
+}
+a:visited {
+color: red;
+}
+a:hover {
+color: yellow;
+}
+
 .center {
     text-align: center;
 }

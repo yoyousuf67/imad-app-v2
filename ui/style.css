@@ -16,7 +16,8 @@ color: yellow;
 }
 
 .center {
-    text-align: center;
+    height:auto;
+	width: auto;
 }
 
 .text-big {

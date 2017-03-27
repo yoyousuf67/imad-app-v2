@@ -1,6 +1,8 @@
 body {
     font-family: sans-serif;
     margin-top: 60px;
+Background-image:url(/ui/back.jpg);
+background-repeat:repeat-x;
 }
 
 .center {

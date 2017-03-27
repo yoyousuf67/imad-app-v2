@@ -29,7 +29,7 @@ request.onreadystatechange=function(){
  console.log(password1);
  //var name= nameInput.value;
 //make a request
-request.open('POST','http://yoyousuf67.imad.hasura-app.io/login',true);
+request.open('POST','http://yoyousuf67.imad.hasura-app.io/create-user',true);
 
 request.setRequestHeader('Content-type','application/json');
 request.send(JSON.stringify({username: username1, password:password1}));

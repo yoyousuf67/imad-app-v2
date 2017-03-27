@@ -18,6 +18,8 @@ color: yellow;
 .center {
     height:auto;
 	width: auto;
+	margin:0;
+	padding:0;
 }
 
 .text-big {

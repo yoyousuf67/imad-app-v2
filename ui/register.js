@@ -26,7 +26,7 @@ request.onreadystatechange=function(){
  var username1=document.getElementById('username1').value;
  var password1=document.getElementById('password1').value;
  var dob=document.getElementById('dob').value;
- var gender=document.getElementById('gender');
+ var gender=document.getElementById('gender').value;
  var name=document.getElementById('name').value;
  console.log(username1);
  console.log(password1);

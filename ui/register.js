@@ -36,7 +36,7 @@ request.onreadystatechange=function(){
 request.open('POST','http://yoyousuf67.imad.hasura-app.io/create-user',true);
 
 request.setRequestHeader('Content-type','application/json');
-request.send(JSON.stringify({username: username1, password:password1}));
+request.send(JSON.stringify({username: username1, password:password1, dob:dob, gender:gender, name:name}));
 
 
      //make a request to the server and send the name

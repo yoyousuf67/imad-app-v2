@@ -116,7 +116,7 @@ app.post('/create-user',function(req,res){
         res.status(500).send(err.toString());
     } 
     });
-     pool.query('INSERT INTO "details" (username,name,dob,gender) VALUES ($1,$2,$3,$4)',[name,dob],function(err,result){
+     pool.query('INSERT INTO "details" (username,name,dob,gender) VALUES ($1,$2,$3,$4)',[username,name,dob,gender],function(err,result){
         if (err){
         res.status(500).send(err.toString());
     } else 

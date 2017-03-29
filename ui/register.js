@@ -30,6 +30,9 @@ request.onreadystatechange=function(){
  var name=document.getElementById('name').value;
  console.log(username1);
  console.log(password1);
+ console.log(dob);
+ console.log(gender);
+ console.log(name);
  //var name= nameInput.value;
 //make a request
 

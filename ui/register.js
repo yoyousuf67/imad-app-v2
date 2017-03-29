@@ -23,8 +23,8 @@ request.onreadystatechange=function(){
       }
   //not done ignore it
 }; 
- var username1=document.getElementById('username1').value;
- var password1=document.getElementById('password1').value;
+ var username1=document.getElementById('dob').value;
+ var password1=document.getElementById('gender').value;
  console.log(username1);
  console.log(password1);
  //var name= nameInput.value;

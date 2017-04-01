@@ -47,6 +47,7 @@ request.onreadystatechange=function(){
          var ul=document.getElementById('namelist');
          ul.innerHTML=list;*/
          alert('Logged in Successfully');
+          window.open('/logout',"_self");
       }else if (request.status===403){alert('Username/password is incorrect');
       }
       else if(request.status===500){

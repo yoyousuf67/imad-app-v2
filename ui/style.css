@@ -32,12 +32,12 @@ left:5px;
 
 
 .container{ margin: 0 auto;
-    color: #17932e;
+    color: #ffffff;
     font-family:"Times New Roman",sans-serif;
     padding-left: 20px;
     padding-right: 20px;
     text-align:center;
-    font-size:150%;
+    font-size:125%;
 }
 #log{
     text-align:center;

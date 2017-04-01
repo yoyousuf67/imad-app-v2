@@ -111,7 +111,7 @@ app.post('/create-user',function(req,res){
     var salt=crypto.randomBytes(128).toString('hex');
     var dbString=hash(password,salt);
 
-    pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2); INSERT INTO "details" (username,name,dob,gender) VALUES ($1,$2,$3,$4)',[username,password],[username,name,dob,gender],function(err,result){
+    pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2); INSERT INTO "details" (username,name,dob,gender) VALUES ($1,$2,$3,$4);',[username,password],[username,name,dob,gender],function(err,result){
         if (err){
         res.status(500).send(err.toString());
     } else 

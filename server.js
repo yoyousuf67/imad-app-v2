@@ -248,6 +248,10 @@ app.get('/ui/register.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
+app.get('/ui/logout.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'logout.html'));
+});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });

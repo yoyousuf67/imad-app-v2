@@ -3,7 +3,7 @@ body {
     margin-top: 60px;
 Background-image:url(/ui/back.jpg);
 background-repeat:repeat-x;
-background-color:#92fc9e;
+background-color:#24ff07;
 }
 
 a:link {
@@ -32,12 +32,13 @@ left:5px;
 
 
 .container{ margin: 0 auto;
-    color: #e21616;
+    color: #17932e;
     font-family:"Times New Roman",sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-    background-color:black;
+    background-color:#24ff07;
     text-align:center;
+    font-size:150%;
 }
 #log{
     text-align:center;

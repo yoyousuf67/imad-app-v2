@@ -16,3 +16,4 @@ request.onreadystatechange=function(){
       }
       else{alert('Some error occurred');
 }}}};
+request.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);

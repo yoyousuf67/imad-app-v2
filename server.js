@@ -111,7 +111,7 @@ app.post('/create-user',function(req,res){
     var salt=crypto.randomBytes(128).toString('hex');
     var dbString=hash(password,salt);
 
-    pool.query('INSERT INTO "user"  (username,password) VALUES ($1,$2); INSERT INTO "details" (username,name,dob,gender) VALUES ($3,$4,$5,$6)',[username,dbString,username,name,dob,gender],function(err,result){
+    pool.query('WITH ins1 AS (INSERT INTO "user" (username,password) VALUES ($1, $2)),ins2 AS (INSERT INTO "details" (name,dob,gender,username) VALUES ($3,$4,$5,$6)', [username,dbString,name,dob,gender,username],function(err,result){
         if (err){
         res.status(500).send(err.toString());
     } else 
@@ -119,7 +119,20 @@ app.post('/create-user',function(req,res){
             res.send('user successfully created:'+username);
         }
     });
-   /*  pool.query('INSERT INTO "details" (username,name,dob,gender) VALUES ($1,$2,$3,$4)',[username,name,dob,gender],function(err,result){
+   /*WITH ins1 AS (
+   INSERT INTO sample(firstname, lastname)
+   VALUES ('fai55', 'shaggk')
+-- ON     CONFLICT DO NOTHING                -- optional addition in Postgres 9.5+
+   RETURNING id AS user_id
+   )
+, ins2 AS (
+   INSERT INTO sample1 (user_id, adddetails)
+   SELECT user_id, 'ss' FROM ins1
+   -- RETURNING user_id                      -- only if used in turn
+   )
+INSERT INTO sample2 (user_id, value)         -- same here
+SELECT user_id, 'ss' FROM ins1;//////////  
+   pool.query('INSERT INTO "details" (username,name,dob,gender) VALUES ($1,$2,$3,$4)',[username,name,dob,gender],function(err,result){
         if (err){
         res.status(500).send(err.toString());
     } else 

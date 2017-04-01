@@ -13,11 +13,12 @@ request.onreadystatechange=function(){
       if(request.status==200){
             
          alert('User Created Successfully');
+          window.open('/index.html',"_self")
          
       }else if (request.status===403){alert('Username/password is incorrect');
       }
       else if(request.status===500){
-              alert('Something went wrong on server');
+              alert('Credentials are incorrect');
               
           }
       }

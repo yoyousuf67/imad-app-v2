@@ -1,19 +1,20 @@
-
 var submit=document.getElementById('logout');
- submit.onclick=function(){
+submit.onclick=function(){
      
-     //create a request object
-var request=new XMLHttpRequest();
-//capture response and store variable
+     var request=new XMLHttpRequest();
 request.onreadystatechange=function(){
   if(request.readyState==XMLHttpRequest.DONE){
-      //take action
       if(request.status==200){
-            
-         alert('Logged Out Successfully');
+           request.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
+         alert('Logged out Successfully');
           window.open('/',"_self");
-         
+      }else if (request.status===403){alert('Something went wrong');
       }
-      else{alert('Some error occurred');
-}}}};
-request.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
+      else if(request.status===500){
+              alert('Something went wrong on server');
+              
+          }
+      }
+};
+}; 
+      request.open('GET','http://yoyousuf67.imad.hasura-app.io/check-login',true);

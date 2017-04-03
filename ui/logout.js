@@ -24,7 +24,7 @@ request.onreadystatechange=function(){
            request.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
          alert('Logged out Successfully');
           window.open('/',"_self");
-      }else if (request.status===403){alert('Something went wrong');
+      }else if (request.status===403){alert('Error detected');
       }
       else if(request.status===500){
               alert('Something went wrong on server');

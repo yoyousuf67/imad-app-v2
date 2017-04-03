@@ -59,7 +59,7 @@ articleThree:{ title:'Article Three',
             This is the content of my third article
             </p> `}
 };*/
-function createTemplate (data){
+/*function createTemplate (data){
     var title=data.title;
     var date=data.date;
     var heading=data.heading;
@@ -88,6 +88,12 @@ var htmlTemplate=` <html>
 </html>
  `;
 
+    return htmlTemplate;
+}*/
+
+function createTemplate(data){
+    var text=data.text;
+    var htmlTemplate='$text';
     return htmlTemplate;
 }
 
@@ -147,7 +153,15 @@ app.post('/login', function(req,res){
                  //object contains value of auth 
                  
                  //auth contains {userId}
-                 res.send('credentials are correct');
+                 var articleName= req.params.text;
+    pool.query("SELECT * FROM test WHERE title= $1",[req.params.text], function(err, result){
+        
+            {
+                var articleData=result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+    });
+                // res.send('credentials are correct');
                  
                  
              } else{

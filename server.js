@@ -131,7 +131,7 @@ app.post('/login', function(req,res){
     } else 
         {
            if(result.rows.length===0){
-               res.send(403).send('username/password invalid');
+               res.status(403).send('username/password invalid');
                
            }
            else{
@@ -151,7 +151,7 @@ app.post('/login', function(req,res){
                  
                  
              } else{
-               res.send(403).send('username/password invalid');
+               res.status(404).send('Not found');
         }}}
     });
 });
@@ -159,10 +159,10 @@ app.post('/login', function(req,res){
 app.get('/check-login',function(req,res){
    if(req.session && req.session.auth && req.session.auth.userId){
       // res.send('You are logged in:'+req.session.auth.userId.toString());
-       res.send('You are logged in:');
+       res.send(200);
    } 
    else{ 
-   res.send(403).send('you are not logged in');}
+   res.status(403).send('you are not logged in');}
 });
 
 app.get('/logout',function(req,res){

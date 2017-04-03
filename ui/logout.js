@@ -10,7 +10,7 @@ request.onreadystatechange=function(){
 request1.onreadystatechange=function(){
   if(request1.readyState==XMLHttpRequest.DONE){
       if(request1.status==200){
-           request.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
+           request1.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
          alert('Logged out Successfully');
           window.open('/',"_self");
       }}};}

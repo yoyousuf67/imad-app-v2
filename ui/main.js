@@ -44,10 +44,8 @@ request.onreadystatechange=function(){
          }
          var ul=document.getElementById('namelist');
          ul.innerHTML=list;*/
-         var response= request.responseText;
-      var change=document.getElementById('change');
          alert('Logged in Successfully');
-          change.innerHTML=response.toString();
+          window.open("ui/logout.html","_self");
       }else if (request.status===403){alert('Username/password is incorrect');
       }
       else if(request.status===500){

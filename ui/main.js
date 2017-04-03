@@ -32,6 +32,22 @@ var request=new XMLHttpRequest();
 
 //capture response and store variable
 request.onreadystatechange=function(){
+        $(function() {
+    $("#client").on("change", function() {
+      var clientid=$("#client").val();
+      $('#loadingmessage').show();
+
+    $.ajax({
+            type:"post",
+            url:"clientnetworkpricelist/yourfile.php",
+        data:"title="+clientid,
+        success:function(data){
+             $('#loadingmessage').hide();
+             $("#result").html(data);
+        }
+    }); 
+    });
+});
   if(request.readyState==XMLHttpRequest.DONE){
       //take action
       if(request.status==200){

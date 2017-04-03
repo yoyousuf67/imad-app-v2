@@ -45,5 +45,11 @@ left:5px;
 }
 #username,#password{
  width: 300px; height: 20px; 
- 
+
 }
+ 
+ #logout{
+     text-align:center;
+     position: absolute;
+
+ }

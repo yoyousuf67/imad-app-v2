@@ -252,6 +252,10 @@ app.get('/ui/logout.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'logout.html'));
 });
 
+app.get('/ui/logout.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'logout.js'));
+});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });

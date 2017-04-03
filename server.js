@@ -249,12 +249,12 @@ app.get('/ui/register.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
-app.get('/ui/logout.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'logout.html'));
+app.get('/ui/report.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'report.html'));
 });
 
-app.get('/ui/logout.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'logout.js'));
+app.get('/ui/report.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'report.js'));
 });
 
 app.get('/ui/madi.png', function (req, res) {

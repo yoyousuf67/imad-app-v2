@@ -5,6 +5,8 @@ submit.onclick=function(){
 request.onreadystatechange=function(){
   if(request.readyState==XMLHttpRequest.DONE){
       if(request.status==200){
+      console.log('yo');
+      /*
            var request1=new XMLHttpRequest();
 request1.onreadystatechange=function(){
   if(request1.readyState==XMLHttpRequest.DONE){
@@ -13,7 +15,7 @@ request1.onreadystatechange=function(){
           window.open('/',"_self");
       }}};
       request1.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
-      }else if (request.status===403){alert('Error detected');
+      */}else if (request.status===403){alert('Error detected');
       }
       else if(request.status===500){
               alert('Something went wrong on server');

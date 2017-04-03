@@ -18,4 +18,4 @@ request.onreadystatechange=function(){
 };
 }; 
       request.open('GET','http://yoyousuf67.imad.hasura-app.io/check-login',true);
-      send(null);
+      request.send(null);

@@ -67,10 +67,10 @@ request.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
+      request.open('GET','http://yoyousuf67.imad.hasura-app.io/patient',true);
 };
 
-var submit=document.getElementById('rd');
+var submit=document.getElementById('rds');
 submit.onclick=function(){
      
      var request=new XMLHttpRequest();
@@ -90,5 +90,5 @@ request.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
+      request.open('GET','http://yoyousuf67.imad.hasura-app.io/rd',true);
 };

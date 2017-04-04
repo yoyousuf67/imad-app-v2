@@ -236,8 +236,8 @@ app.get('/article/:articleName', function (req, res) {
 });
 
 
-app.get('/doctor', function (req, res) {
-    pool.query("SELECT details FROM doctordetail WHERE id='1'", function(err, result){
+app.get('/patient', function (req, res) {
+    pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
@@ -246,12 +246,13 @@ app.get('/doctor', function (req, res) {
             
             }else
             {
-                var data=result.rows[0];
-                res.send(createTemplate1(data));
+                //var data=result.rows[0];
+                res.send(JSON.stringify(result.rows));
             }
         }
     });
 });
+
 
 app.get('/patient', function (req, res) {
     pool.query("SELECT details FROM patientdetail WHERE id= 1", function(err, result){

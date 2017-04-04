@@ -1,4 +1,4 @@
-window.onload = function () {
+
 
 var submit=document.getElementById('logout');
 submit.onclick=function(){
@@ -93,4 +93,4 @@ request3.onreadystatechange=function(){
 };
       console.log('request sent');
       request.open('GET','http://yoyousuf67.imad.hasura-app.io/rd',true);
-};};
+};

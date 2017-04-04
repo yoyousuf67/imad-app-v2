@@ -23,7 +23,7 @@ request.onreadystatechange=function(){
 };
 
 
-
+window.onload = function () {
 var submit1=document.getElementById('doctor');
 submit1.onclick=function(){
      
@@ -45,7 +45,7 @@ request.onreadystatechange=function(){
 };
       console.log('request sent');
       request.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
-};
+};}
 
 var submit2=document.getElementById('patients');
 submit2.onclick=function(){

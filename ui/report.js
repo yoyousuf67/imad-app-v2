@@ -30,28 +30,27 @@ request.onreadystatechange=function(){
 
 
 
-submit1.onclick=function(){
+submit2.onclick=function(){
      
-     var request1=new XMLHttpRequest();
-request1.onreadystatechange=function(){
-  if(request1.readyState==XMLHttpRequest.DONE){
-      if(request1.status==200){
-       var dbdetail= request1.responseText;
+     var request2=new XMLHttpRequest();
+request2.onreadystatechange=function(){
+  if(request2.readyState==XMLHttpRequest.DONE){
+      if(request2.status==200){
+          alert('patient Successfully');
+       var dbdetail= request2.responseText;
       var span=document.getElementById('details');
-      alert('doctor Successfully');
     span.innerHTML=dbdetail.toString();
  }
-      else {alert('Error detected');
+      else if (request2.status===403){alert('Error detected');
       }
-      /*else if(request1.status===500){
+      else {
               alert('Something went wrong on server');
               
-          }*/
-      
-}
-      console.log('request sent');
-      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
+          }
+      }
 };
+      console.log('request sent');
+      request2.open('GET','http://yoyousuf67.imad.hasura-app.io/patient',true);
 };
 
 submit2.onclick=function(){

@@ -30,18 +30,18 @@ request.onreadystatechange=function(){
 
 
 
-submit2.onclick=function(){
+submit1.onclick=function(){
      
-     var request2=new XMLHttpRequest();
-request2.onreadystatechange=function(){
-  if(request2.readyState==XMLHttpRequest.DONE){
-      if(request2.status==200){
+     var request1=new XMLHttpRequest();
+request1.onreadystatechange=function(){
+  if(request1.readyState==XMLHttpRequest.DONE){
+      if(request1.status==200){
           alert('patient Successfully');
-       var dbdetail= request2.responseText;
+       var dbdetail= request1.responseText;
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
  }
-      else if (request2.status===403){alert('Error detected');
+      else if (request1.status===403){alert('Error detected');
       }
       else {
               alert('Something went wrong on server');
@@ -50,7 +50,7 @@ request2.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request2.open('GET','http://yoyousuf67.imad.hasura-app.io/patient',true);
+      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/patient',true);
 };
 
 submit2.onclick=function(){

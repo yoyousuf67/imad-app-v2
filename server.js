@@ -225,6 +225,59 @@ app.get('/article/:articleName', function (req, res) {
     });
 });
 
+
+app.get('/doctor', function (req, res) {
+    pool.query("SELECT details FROM doctordetail WHERE id= 1", function(err, result){
+        if(err){
+            res.status(500).send(err.toString());
+        }else{
+            if(result.rows.length===0){
+                res.status(404).send('Detail Not Found');
+            
+            }else
+            {
+                var data=result.rows[0];
+                res.send(data);
+            }
+        }
+    });
+});
+
+app.get('/patient', function (req, res) {
+    pool.query("SELECT details FROM patientdetail WHERE id= 1", function(err, result){
+        if(err){
+            res.status(500).send(err.toString());
+        }else{
+            if(result.rows.length===0){
+                res.status(404).send('Detail Not Found');
+            
+            }else
+            {
+                var data=result.rows[0];
+                res.send(data);
+            }
+        }
+    });
+});
+
+
+app.get('/rd', function (req, res) {
+    pool.query("SELECT details FROM test WHERE id= 1", function(err, result){
+        if(err){
+            res.status(500).send(err.toString());
+        }else{
+            if(result.rows.length===0){
+                res.status(404).send('Detail Not Found');
+            
+            }else
+            {
+                var data=result.rows[0];
+                res.send(data);
+            }
+        }
+    });
+});
+
 app.get('/articletwo', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
 });

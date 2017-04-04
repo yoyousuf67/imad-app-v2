@@ -41,18 +41,18 @@ request1.onreadystatechange=function(){
       alert('doctor Successfully');
     span.innerHTML=dbdetail.toString();
  }
-      else if (request1.status===403){alert('Error detected');
+      else {alert('Error detected');
       }
-      else if(request1.status===500){
+      /*else if(request1.status===500){
               alert('Something went wrong on server');
               
-          }
-      }
-};
+          }*/
+      
+}
       console.log('request sent');
       request1.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
 };
-
+};
 
 submit2.onclick=function(){
      

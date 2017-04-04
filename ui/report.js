@@ -33,11 +33,12 @@ request.onreadystatechange=function(){
 submit1.onclick=function(){
      
      var request1=new XMLHttpRequest();
-request.onreadystatechange=function(){
+request1.onreadystatechange=function(){
   if(request1.readyState==XMLHttpRequest.DONE){
       if(request1.status==200){
-       var dbdetail= request.responseText;
+       var dbdetail= request1.responseText;
       var span=document.getElementById('details');
+      alert('doctor Successfully');
     span.innerHTML=dbdetail.toString();
  }
       else if (request1.status===403){alert('Error detected');
@@ -59,7 +60,8 @@ submit2.onclick=function(){
 request2.onreadystatechange=function(){
   if(request2.readyState==XMLHttpRequest.DONE){
       if(request2.status==200){
-       var dbdetail= request.responseText;
+          alert('patient Successfully');
+       var dbdetail= request2.responseText;
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
  }
@@ -82,7 +84,8 @@ submit3.onclick=function(){
 request3.onreadystatechange=function(){
   if(request3.readyState==XMLHttpRequest.DONE){
       if(request3.status==200){
-       var dbdetail= request.responseText;
+          alert('report Successfully');
+       var dbdetail= request3.responseText;
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
  }

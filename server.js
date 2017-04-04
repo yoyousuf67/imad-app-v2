@@ -91,16 +91,6 @@ var htmlTemplate=` <html>
     return htmlTemplate;
 }
 
-function createTemplate1 (data){
-    var content=data.details;
-var htmlTemplate=` 
-            ${content}
-       
- `;
-
-    return htmlTemplate;
-}
-
 
 function hash(input,salt){
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
@@ -247,7 +237,7 @@ app.get('/doctor', function (req, res) {
             }else
             {
                 var data=result.rows[0];
-                res.send(createTemplate1(data));
+                res.send(JSON.stringify(data));
             }
         }
     });

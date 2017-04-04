@@ -46,7 +46,7 @@ request.onreadystatechange=function(){
          ul.innerHTML=list;*/
          alert('Logged in Successfully');
           window.open("ui/report.html","_self");
-      }else if (request.status===403){alert('Username/password is incorrect');
+      }else if (request.status===403){alert('Forbidden Request');
       }
       else if(request.status===500){
               alert('Something went wrong on server');

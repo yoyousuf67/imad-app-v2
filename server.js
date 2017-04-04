@@ -250,7 +250,12 @@ app.get('/ui/register.html', function (req, res) {
 });
 
 app.get('/ui/report.html', function (req, res) {
+     if(req.session && req.session.auth && req.session.auth.userId){
   res.sendFile(path.join(__dirname, 'ui', 'report.html'));
+}
+    else{
+        res.status(403).send('Forbidden');
+    }
 });
 
 app.get('/ui/report.js', function (req, res) {

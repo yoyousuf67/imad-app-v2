@@ -36,11 +36,13 @@ submit1.onclick=function(){
 request1.onreadystatechange=function(){
   if(request1.readyState==XMLHttpRequest.DONE){
       if(request1.status==200){
-          alert('patient Successfully');
+         alert('patient Successfully');
        var dbdetail= request1.responseText;
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
- }
+ 
+          
+      }
       else if (request1.status===403){alert('Error detected');
       }
       else {
@@ -50,7 +52,7 @@ request1.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/patient',true);
+      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/article/articleOne',true);
 };
 
 submit2.onclick=function(){

@@ -39,6 +39,7 @@ request1.onreadystatechange=function(){
       if(request1.status==200){
          alert('doctor Successfully');
        var dbdetail= request1.responseText;
+       console.log(dbdetail);
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
  

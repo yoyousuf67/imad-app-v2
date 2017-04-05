@@ -237,6 +237,7 @@ app.get('/article/:articleName', function (req, res) {
 
 
 app.get('/doctor', function (req, res) {
+    console.log('request recieved');
     pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, rows, result){
         if(err){
             res.status(500).send(err.toString());
@@ -247,7 +248,8 @@ app.get('/doctor', function (req, res) {
             }else
             {
                 //var data=result.rows[0];
-                res.statys(200).send(rows);
+                console.log(rows);
+                res.status(200).send(createTemplate(rows));
             }
         }
     });

@@ -93,9 +93,9 @@ var htmlTemplate=` <html>
 
 function createTemplate1 (data){
     var content=data.details;
-var htmlTemplate=` 
+var htmlTemplate1=` <table>
             ${content}
-       
+       </table>
  `;
 
     return htmlTemplate1;
@@ -237,8 +237,7 @@ app.get('/article/:articleName', function (req, res) {
 
 
 app.get('/doctor', function (req, res) {
-    console.log('request recieved');
-    pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, rows, result){
+    pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
@@ -247,10 +246,8 @@ app.get('/doctor', function (req, res) {
             
             }else
             {
-                //var data=result.rows[0];
-                console.log(rows);
-                console.log(createTemplate1(rows));
-                res.status(200).send(createTemplate1(rows));
+               var data=result.rows[0];
+                res.status(200).send(createTemplate1(data));
             }
         }
     });
@@ -258,7 +255,7 @@ app.get('/doctor', function (req, res) {
 
 
 app.get('/patient', function (req, res) {
-    pool.query("SELECT details FROM patientdetail WHERE id= 1", function(err, result){
+    pool.query("SELECT details FROM patientdetail WHERE id= '1'", function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
@@ -268,7 +265,7 @@ app.get('/patient', function (req, res) {
             }else
             {
                 var data=result.rows[0];
-                res.send(data);
+                res.send(createTemplate1(data));
             }
         }
     });
@@ -276,7 +273,7 @@ app.get('/patient', function (req, res) {
 
 
 app.get('/rd', function (req, res) {
-    pool.query("SELECT details FROM test WHERE id= 1", function(err, result){
+    pool.query("SELECT details FROM test WHERE id= '1'", function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
@@ -286,7 +283,7 @@ app.get('/rd', function (req, res) {
             }else
             {
                 var data=result.rows[0];
-                res.send(data);
+                res.send(createTemplate1(data));
             }
         }
     });

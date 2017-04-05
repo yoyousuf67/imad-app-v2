@@ -237,7 +237,7 @@ app.get('/article/:articleName', function (req, res) {
 
 
 app.get('/doctor', function (req, res) {
-    pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, result){
+    pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, rows, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
@@ -247,7 +247,7 @@ app.get('/doctor', function (req, res) {
             }else
             {
                 //var data=result.rows[0];
-                res.send(JSON.stringify(result.rows));
+                res.send(rows);
             }
         }
     });

@@ -4,7 +4,7 @@ var submit=document.getElementById('logout');
 var submit1=document.getElementById('doctors');
 var submit2=document.getElementById('patients');
 var submit3=document.getElementById('rds');
-submit.onclick=function(){
+/*submit.onclick=function(){
      
      var request=new XMLHttpRequest();
 request.onreadystatechange=function(){
@@ -25,7 +25,7 @@ request.onreadystatechange=function(){
       console.log('request sent');
       request.open('GET','http://yoyousuf67.imad.hasura-app.io/logout',true);
       request.send(null);
-};
+};*/
 
 
 
@@ -57,7 +57,7 @@ request1.onreadystatechange=function(){
       request1.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
 };
 
-submit2.onclick=function(){
+/*submit2.onclick=function(){
      
      var request2=new XMLHttpRequest();
 request2.onreadystatechange=function(){
@@ -102,4 +102,4 @@ request3.onreadystatechange=function(){
 };
       console.log('request sent');
       request3.open('GET','http://yoyousuf67.imad.hasura-app.io/rd',true);
-};
+};*/

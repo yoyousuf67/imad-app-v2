@@ -247,7 +247,7 @@ app.get('/doctor', function (req, res) {
             }else
             {
                 //var data=result.rows[0];
-                res.send(rows);
+                res.statys(200).send(rows);
             }
         }
     });

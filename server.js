@@ -249,7 +249,8 @@ app.get('/doctor', function (req, res) {
             {
                 //var data=result.rows[0];
                 console.log(rows);
-                res.status(200).send(createTemplate(rows));
+                console.log(createTemplate1(rows));
+                res.status(200).send(createTemplate1(rows));
             }
         }
     });

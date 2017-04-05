@@ -238,7 +238,7 @@ app.get('/article/:articleName', function (req, res) {
 
 app.get('/doctor', function (req, res) {
     var name=req.params.name;
-    pool.query("SELECT details FROM doctordetail WHERE id= '1'",[req.params.name], function(err, result){
+    pool.query("SELECT details FROM doctordetail WHERE id= '1'", function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{

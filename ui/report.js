@@ -37,7 +37,6 @@ submit1.onclick=function(){
 request1.onreadystatechange=function(){
   if(request1.readyState==XMLHttpRequest.DONE){
       if(request1.status==200){
-         alert('doctor Successfully');
        var dbdetail= request1.responseText;
        console.log(dbdetail);
       var span=document.getElementById('details');
@@ -54,7 +53,7 @@ request1.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
+      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/report/doctordetail',true);
       request1.send(null);
 };
 
@@ -64,7 +63,6 @@ submit2.onclick=function(){
 request2.onreadystatechange=function(){
   if(request2.readyState==XMLHttpRequest.DONE){
       if(request2.status==200){
-          alert('patient Successfully');
        var dbdetail= request2.responseText;
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
@@ -78,7 +76,7 @@ request2.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request2.open('GET','http://yoyousuf67.imad.hasura-app.io/patient',true);
+      request2.open('GET','http://yoyousuf67.imad.hasura-app.io/report/patientdetail',true);
       request2.send(null);
 };
 
@@ -89,7 +87,6 @@ submit3.onclick=function(){
 request3.onreadystatechange=function(){
   if(request3.readyState==XMLHttpRequest.DONE){
       if(request3.status==200){
-          alert('report Successfully');
        var dbdetail= request3.responseText;
       var span=document.getElementById('details');
     span.innerHTML=dbdetail.toString();
@@ -103,6 +100,6 @@ request3.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request3.open('GET','http://yoyousuf67.imad.hasura-app.io/rd',true);
+      request3.open('GET','http://yoyousuf67.imad.hasura-app.io/report/test',true);
       request3.send(null);
 };

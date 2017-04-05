@@ -54,7 +54,7 @@ request1.onreadystatechange=function(){
       }
 };
       console.log('request sent');
-      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/article/articleOne',true);
+      request1.open('GET','http://yoyousuf67.imad.hasura-app.io/doctor',true);
 };
 
 submit2.onclick=function(){

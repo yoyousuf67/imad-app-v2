@@ -51,6 +51,8 @@ request.onreadystatechange=function(){
       else if(request.status===500){
               alert('Something went wrong on server');
               
+          }else if(request.status===404){
+              alert('Invalid Credentials');
           }
       }
   //not done ignore it

@@ -10,13 +10,13 @@ var validate=function(username1,dob,gender,name,password1){
 }
 
 
-    if (dob === null || dob === "" || !pattern.test(dob)) {
+   else if (dob === null || dob === "" || !pattern.test(dob)) {
         window.alert("Please enter correct date format");
         return false;
         
     }
     
-    if(gender != "male"){
+  else  if(gender != "male"){
         if(gender != "female"){
              window.alert("Please enter correct gender");
              return false;
@@ -24,19 +24,20 @@ var validate=function(username1,dob,gender,name,password1){
         }
     }
     
-     if (name === "")
+   else  if (name === "")
 {
     window.alert("Please enter your name.");
     return false;
 }
     
     
-     if (password1 === "")
+   else  if (password1 === "")
 {
     window.alert("Please enter your name.");
     return false;
 }
 
+else {return true;}
 
 }; 
 

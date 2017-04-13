@@ -1,12 +1,61 @@
- 
+var username1=document.getElementById('username1').value;
+var password1=document.getElementById('password1').value;
+var dob=document.getElementById('dob').value;
+var gender=document.getElementById('gender').value;
+var name=document.getElementById('name').value;
+
+var validate=function(){
+    var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+    
+    if (username1 === "")
+{
+    window.alert("Please enter your username.");
+    username1.focus();
+    return false;
+}
+
+
+    if (dob === null || dob === "" || !pattern.test(dob)) {
+        window.alert("Please enter correct date format");
+        dob.focus();
+        return false;
+        
+    }
+    
+    if(gender != "male"){
+        if(gender != "female"){
+             window.alert("Please enter correct gender");
+             gender.focus();
+             return false;
+            
+        }
+    }
+    
+     if (name === "")
+{
+    window.alert("Please enter your name.");
+    name.focus();
+    return false;
+}
+    
+    
+     if (password1 === "")
+{
+    window.alert("Please enter your name.");
+    password1.focus();
+    return false;
+}
+
+
+}; 
 
 
 var submit=document.getElementById('submit1');
  submit.onclick=function(){
-     
      //create a request object
 var request=new XMLHttpRequest();
 //capture response and store variable
+if(validate){
 request.onreadystatechange=function(){
   if(request.readyState==XMLHttpRequest.DONE){
       //take action
@@ -24,11 +73,7 @@ request.onreadystatechange=function(){
       }
   //not done ignore it
 }; 
- var username1=document.getElementById('username1').value;
- var password1=document.getElementById('password1').value;
- var dob=document.getElementById('dob').value;
- var gender=document.getElementById('gender').value;
- var name=document.getElementById('name').value;
+}
  console.log(username1);
  console.log(password1);
  console.log(dob);

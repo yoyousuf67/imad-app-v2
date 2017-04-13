@@ -1,10 +1,6 @@
-var username1=document.getElementById('username1').value;
-var password1=document.getElementById('password1').value;
-var dob=document.getElementById('dob').value;
-var gender=document.getElementById('gender').value;
-var name=document.getElementById('name').value;
 
-var validate=function(){
+
+var validate=function(username1,dob,gender,name,password1){
     var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
     
     if (username1 === "")
@@ -50,7 +46,6 @@ var submit=document.getElementById('submit1');
      //create a request object
 var request=new XMLHttpRequest();
 //capture response and store variable
-if(validate()){
 request.onreadystatechange=function(){
   if(request.readyState==XMLHttpRequest.DONE){
       //take action
@@ -68,7 +63,7 @@ request.onreadystatechange=function(){
       }
   //not done ignore it
 }; 
-}
+
  console.log(username1);
  console.log(password1);
  console.log(dob);
@@ -76,13 +71,18 @@ request.onreadystatechange=function(){
  console.log(name);
  //var name= nameInput.value;
 //make a request
-
+var username1=document.getElementById('username1').value;
+var password1=document.getElementById('password1').value;
+var dob=document.getElementById('dob').value;
+var gender=document.getElementById('gender').value;
+var name=document.getElementById('name').value;
+if(validate(username1,dob,gender,name,password1)){
 request.open('POST','http://yoyousuf67.imad.hasura-app.io/create-user',true);
 
 request.setRequestHeader('Content-type','application/json');
 request.send(JSON.stringify({username: username1, password:password1, dob:dob, gender:gender, name:name}));
 
-
+}
      //make a request to the server and send the name
      
  };

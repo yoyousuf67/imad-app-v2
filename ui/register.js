@@ -55,7 +55,7 @@ var submit=document.getElementById('submit1');
      //create a request object
 var request=new XMLHttpRequest();
 //capture response and store variable
-if(validate){
+if(validate()){
 request.onreadystatechange=function(){
   if(request.readyState==XMLHttpRequest.DONE){
       //take action

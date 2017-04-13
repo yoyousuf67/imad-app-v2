@@ -10,14 +10,12 @@ var validate=function(){
     if (username1 === "")
 {
     window.alert("Please enter your username.");
-    username1.focus();
     return false;
 }
 
 
     if (dob === null || dob === "" || !pattern.test(dob)) {
         window.alert("Please enter correct date format");
-        dob.focus();
         return false;
         
     }
@@ -25,7 +23,6 @@ var validate=function(){
     if(gender != "male"){
         if(gender != "female"){
              window.alert("Please enter correct gender");
-             gender.focus();
              return false;
             
         }
@@ -34,7 +31,6 @@ var validate=function(){
      if (name === "")
 {
     window.alert("Please enter your name.");
-    name.focus();
     return false;
 }
     
@@ -42,7 +38,6 @@ var validate=function(){
      if (password1 === "")
 {
     window.alert("Please enter your name.");
-    password1.focus();
     return false;
 }
 

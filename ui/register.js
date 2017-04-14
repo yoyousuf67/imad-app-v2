@@ -58,7 +58,7 @@ request.onreadystatechange=function(){
       }else if (request.status===403){alert('Username/password is incorrect');
       }
       else if(request.status===500){
-              alert('Credentials are incorrect');
+              alert('Username already in use');
               
           }
       }
